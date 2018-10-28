@@ -27,7 +27,8 @@ Resources:
   MyDatabase:
     Type: AWS::Glue::Database
     Properties:
-      CatalogId: Ref: AWS::AccountId
+      CatalogId:
+        Ref: AWS::AccountId
       DatabaseInput:
         Name: "dbCrawler"
         Description: "TestDatabaseDescription"
@@ -55,12 +56,14 @@ Resources:
     Properties:
       Name: "testcrawler1"
       Role: Fn::GetAtt: [MyRole, Arn]
-      DatabaseName: Ref: MyDatabase
+      DatabaseName:
+        Ref: MyDatabase
       Classifiers:
         - Ref: MyClassifier
       Targets:
         S3Targets:
-          - Path: Ref: MyS3Bucket
+          - Path:
+            Ref: MyS3Bucket
       SchemaChangePolicy:
         UpdateBehavior: "UPDATE_IN_DATABASE"
         DeleteBehavior: "LOG"
