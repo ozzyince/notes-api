@@ -55,7 +55,8 @@ Resources:
     Type: AWS::Glue::Crawler
     Properties:
       Name: "testcrawler1"
-      Role: Fn::GetAtt: [MyRole, Arn]
+      Role:
+        Fn::GetAtt: [MyRole, Arn]
       DatabaseName:
         Ref: MyDatabase
       Classifiers:
