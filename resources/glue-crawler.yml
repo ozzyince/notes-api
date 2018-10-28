@@ -30,7 +30,7 @@ Resources:
       CatalogId:
         Ref: AWS::AccountId
       DatabaseInput:
-        Name: "dbCrawler"
+        Name: "dbcrawler"
         Description: "TestDatabaseDescription"
         LocationUri: "TestLocationUri"
         Parameters:
