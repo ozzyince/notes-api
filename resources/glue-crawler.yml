@@ -64,7 +64,7 @@ Resources:
       Targets:
         S3Targets:
           - Path:
-            - Ref: MyS3Bucket
+              Ref: MyS3Bucket
       SchemaChangePolicy:
         UpdateBehavior: "UPDATE_IN_DATABASE"
         DeleteBehavior: "LOG"
