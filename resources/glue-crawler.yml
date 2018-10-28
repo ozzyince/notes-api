@@ -48,7 +48,7 @@ Resources:
   MyS3Bucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: "crawlertesttarget"
+      BucketName: "crawlertestttarget"
       AccessControl: "BucketOwnerFullControl"
 
   MyCrawler2:
